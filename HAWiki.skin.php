@@ -60,6 +60,8 @@ class HawikiTemplate extends BaseTemplate {
 		$this->skin = $this->data['skin'];
 		$action = $this->skin->getRequest()->getText( 'action' );
 
+		$this->data['pageLanguage'] =
+			$this->getSkin()->getTitle()->getPageViewLanguage()->getHtmlCode();
 		$this->html( 'headelement' );
 ?>
 	<div id="topbar" class="noprint">
@@ -115,15 +117,11 @@ class HawikiTemplate extends BaseTemplate {
 			<div id="content" class="mw-body" role="main">
 				<a id="top"></a>
 				<?php
-					echo $this->getIndicators();
-					// Loose comparison with '!=' is intentional, to catch null and false too, but not '0'
-					if ( $this->data['title'] != '' ) {
-					?>
-					<h1 id="firstHeading" class="firstHeading" lang="<?php
-					$this->data['pageLanguage'] =
-						$this->getSkin()->getTitle()->getPageViewLanguage()->getHtmlCode();
-					$this->text( 'pageLanguage' );
-					?>"><?php $this->html( 'title' ) ?></h1>
+				echo $this->getIndicators();
+				// Loose comparison with '!=' is intentional, to catch null and false too, but not '0'
+				if ( $this->data['title'] != '' ) {
+				?>
+					<h1 id="firstHeading" class="firstHeading" lang="<?php $this->text( 'pageLanguage' ); ?>"><?php $this->html( 'title' ) ?></h1>
 				<?php } ?>
 				<div id="bodyContent" class="mw-body-content">
 					<h3 id="siteSub"><?php $this->msg( 'tagline' ) ?></h3>
