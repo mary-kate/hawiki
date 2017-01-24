@@ -58,7 +58,6 @@ class HawikiTemplate extends BaseTemplate {
 	 */
 	function execute() {
 		$this->skin = $this->data['skin'];
-		$action = $this->skin->getRequest()->getText( 'action' );
 
 		$this->data['pageLanguage'] =
 			$this->getSkin()->getTitle()->getPageViewLanguage()->getHtmlCode();
