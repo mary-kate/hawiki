@@ -29,6 +29,21 @@
 			"styles": {
 				"hawiki/main.css": {
 					"media": "screen"
+				},
+				"hawiki/large-ish.css": {
+					"media": "screen and (min-width: 1024px)"
+				},
+				"hawiki/medium.css": {
+					"media": "screen and (max-width: 1023px)"
+				},
+				"hawiki/column-stuff.css": {
+					"media": "screen and (max-width: 1000px)"
+				},
+				"hawiki/small.css": {
+					"media": "screen and (max-width: 800px)"
+				},
+				"hawiki/smallest.css": {
+					"media": "screen and (max-width: 500px)"
 				}
 			},
 			"position": "top"
