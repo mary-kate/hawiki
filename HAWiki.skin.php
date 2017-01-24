@@ -2,8 +2,6 @@
 /**
  * MediaWiki skin for Haskell Wiki <https://wiki.haskell.org/>
  *
- * ashley note: h3's in languageBox() & friends were originally h5's
- *
  * @file
  * @ingroup Skins
  */
@@ -65,7 +63,6 @@ class HawikiTemplate extends BaseTemplate {
 		$this->html( 'headelement' );
 ?>
 	<div id="topbar" class="noprint">
-		<!-- ashley: added noprint class back to #p-personal -->
 		<div class="portlet noprint" id="p-personal" role="navigation">
 			<h3><?php $this->msg( 'personaltools' ) ?></h3>
 
@@ -252,8 +249,7 @@ class HawikiTemplate extends BaseTemplate {
 	function searchBox() {
 		?>
 		<div id="p-search" class="portlet" role="search">
-			<h3><label for="searchInput"><?php $this->msg( 'search' ) ?></label></h3>
-
+			<!--<h3><label for="searchInput"><?php $this->msg( 'search' ) ?></label></h3>-->
 			<div id="searchBody" class="pBody">
 				<form action="<?php $this->text( 'wgScript' ) ?>" id="searchform">
 					<input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>"/>

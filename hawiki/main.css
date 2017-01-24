@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
 /*   font-size:13px; */
-	line-height:1.4;
+	line-height: 1.4;
 	font-family: "Liberation Sans", "proxima-nova-1","proxima-nova-2", "Helvetica Neue", Calibri, Arial, Helvetica, sans-serif;
 	*font-size:small; /* for IE */
 	*font:x-small; /* for IE in quirks mode */
@@ -176,7 +176,7 @@ a.new { color: #666; }
 	width: 180px;
 	overflow: visible;
 }
-#p-logo h5 {
+#p-logo h3 {
 	display: none;
 }
 #p-logo a,
@@ -263,8 +263,9 @@ a.new { color: #666; }
 	padding: 5px 0 5px 0;
 	margin: 0 10px 0 30px;
 }
-#p-personal h5 {
-	display: none; }
+#p-personal h3 {
+	display: none;
+}
 #p-personal li {
 	display: inline;
 	text-align: left;
@@ -298,7 +299,7 @@ a.new { color: #666; }
 }
 
 #p-cactions .pBody { display: inline; }
-#p-cactions h5 { display: none; }
+#p-cactions h3 { display: none; }
 #p-cactions ul {
 	display: inline;
 	margin: 0;
@@ -492,7 +493,8 @@ textarea {
 }
 
 .bg-image {
-	background: rgb(78,98,114) repeat-x url(/wikistatic/gradient.png);
+	/* @embed */
+	background: rgb(78,98,114) repeat-x url(gradient.png);
 	color: white;
 	padding: 0.5em 0.5em 0.5em 200px;
 	position: relative;
@@ -589,7 +591,8 @@ textarea {
 }
 
 .home-dynamic {
-	background: #eeeeee repeat-x url(/wikistatic/gradient-gray.png);
+	/* @embed */
+	background: #eeeeee repeat-x url(gradient-gray.png);
 }
 
 .home-dynamic ul {
@@ -688,7 +691,8 @@ textarea {
 		display: none;
 	}
 	#topbar {
-		background: rgb(41,56,69) url(/wikistatic/hslogo-16.png) no-repeat 5px 5px;
+		/* @embed */
+		background: rgb(41,56,69) url(hslogo-16.png) no-repeat 5px 5px;
 	}
 	#column-content {
 		margin-left: 0;
@@ -709,7 +713,8 @@ textarea {
 }
 
 .homepage #p-logo a {
-	background-image: url(/wikistatic/haskellwiki_logo_white.png) !important;
+	/* @embed */
+	background-image: url(haskellwiki_logo_white.png) !important;
 }
 
 table#sv-ext, table#sv-software, table#sv-hooks {
