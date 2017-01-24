@@ -92,9 +92,9 @@ class HawikiTemplate extends BaseTemplate {
 				</ul>
 			</div>
 		</div>
-        <?php $this->searchBox(); ?>
+		<?php $this->searchBox(); ?>
 	</div>
-	<div id="globalWrapper"<?php if ( $this->data['title'] == 'Haskell' ) { ?> class="homepage" <?php } ?>>
+	<div id="globalWrapper"<?php if ( $this->skin->getTitle()->isMainPage() ) { ?> class="homepage" <?php } ?>>
 		<div class="portlet" id="p-logo" role="banner">
 			<?php
 			echo Html::element( 'a', array(
