@@ -60,7 +60,7 @@ class HawikiTemplate extends BaseTemplate {
 		$this->skin = $this->data['skin'];
 
 		$this->data['pageLanguage'] =
-			$this->getSkin()->getTitle()->getPageViewLanguage()->getHtmlCode();
+			$this->skin->getTitle()->getPageViewLanguage()->getHtmlCode();
 		$this->html( 'headelement' );
 ?>
 	<div id="topbar" class="noprint">
@@ -78,7 +78,7 @@ class HawikiTemplate extends BaseTemplate {
 						unset( $personalTools['uls'] );
 					}
 
-					if ( !$this->getSkin()->getUser()->isLoggedIn() &&
+					if ( !$this->skin->getUser()->isLoggedIn() &&
 						User::groupHasPermission( '*', 'edit' ) ) {
 
 						echo Html::rawElement( 'li', array(
@@ -168,7 +168,7 @@ class HawikiTemplate extends BaseTemplate {
 			<div id="f-<?php echo htmlspecialchars( $blockName ); ?>ico">
 				<?php
 				foreach ( $footerIcons as $icon ) {
-					echo $this->getSkin()->makeFooterIcon( $icon );
+					echo $this->skin->makeFooterIcon( $icon );
 				}
 				?>
 			</div>
