@@ -1,0 +1,38 @@
+{
+	"name": "HAWiki",
+	"version": "2.0",
+	"author": [
+		"...",
+		"Jack Phoenix"
+	],
+	"url": "https://www.mediawiki.org/wiki/Skin:HAWiki",
+	"descriptionmsg": "hawiki-skin-desc",
+	"type": "skin",
+	"ValidSkinNames": {
+		"hawiki": "HAWiki"
+	},
+	"MessagesDirs": {
+		"SkinHAWiki": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"SkinHAWiki": "HAWiki.skin.php",
+		"HAWikiTemplate": "HAWiki.skin.php"
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "HAWiki"
+	},
+	"ResourceModules": {
+		"skins.hawiki": {
+			"styles": {
+				"hawiki/main.css": {
+					"media": "screen"
+				}
+			},
+			"position": "top"
+		}
+	},
+	"manifest_version": 1
+}
